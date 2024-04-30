@@ -1,0 +1,252 @@
+/*Variables Colores y Opacidad*/
+$opacidad-negro: rgba(0,0,0,0.5);
+$opacidad-negro-fuerte: rgba(0,0,0,0.65);
+$color-rojo: #E50914;
+$color-rojo-oscuro: #B20710;
+
+/*Fuentes*/
+$f-peque: 1.3rem;
+$f-normal: 1.6rem;
+$f-grande: 2rem;
+$f-titulo: 3.5rem;
+
+/*Fuentes del proyecto*/
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("./fonts/Roboto-Bold.ttf");
+}
+
+/*Utilidades*/
+$borde-redondeado: 0.4rem;
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  max-width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient($opacidad-negro, $opacidad-negro), url("./img/background.jpg");
+
+}
+html{
+  font-family:"Roboto-Regular", sans-serif;
+  font-size: 62.5%;
+  color:white;
+}
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Header*/
+header{
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-logo{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .nav-botones{
+      select{
+        font-family:Arial, Helvetica, sans-serif, 'FontAwesome';
+        background-color: $opacidad-negro;
+        color: white;
+        font-size: $f-normal;
+        border: 1px solid white;
+        option{
+          background-color: whitesmoke;
+          color: black;
+        }
+      }
+
+      button{
+        all:unset;
+        background-color: $color-rojo;
+        font-size: $f-normal;
+        &:hover{
+          background-color: $color-rojo-oscuro;
+        }
+      }
+
+      .nav-boton{
+        padding: 5px 15px 5px 15px;
+        border-radius: 5px;
+        margin:10px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/*Contenido Central*/
+main{
+  margin: 0 auto;
+  padding-top: 2rem;
+  .card-formulario{
+    background-color: $opacidad-negro-fuerte;
+    width: 45rem;
+    height: 75rem;
+    form{
+      padding-left: 70px;
+      padding-right: 70px;
+      padding-top: 5rem;
+      legend{
+        font-size: $f-titulo;
+        font-family: "Roboto-Bold", sans-serif;
+        margin-bottom: 4rem;
+      }
+      //Inputs
+      .campo{
+        display: flex;
+        position: relative;
+        input{
+          flex: 1;
+          border:1px solid white;
+          border-radius: $borde-redondeado;
+          padding: 2rem;
+          margin-bottom: 1.5rem;
+          transition: 0.1s ease;
+          background-color: $opacidad-negro;
+          z-index: 1111;
+          outline: none;
+          &:focus, &:valid{
+            border: 2px solid whitesmoke;
+          }
+  
+          &:focus + label,
+          &:valid + label{
+            color:whitesmoke;
+            font-size: 1rem;
+            line-height: 30px;
+            transform: translate(-1.5rem, -1.6rem);
+          }
+        }
+        label{
+          position: absolute;
+          font-size: 1.6rem;
+          padding: 1.8rem 2.8rem;
+          transition: 0.2s ease;
+        }
+      }
+
+      //Session de botones, recuerdame y suscribete ahora
+      .formulario-sesion{
+        //Botones de Iniciar Sesion
+        display: flex;
+        flex-direction: column;
+        button{
+          padding: 1rem;
+          border: none;
+          border-radius: $borde-redondeado;
+        }
+        .formulario-boton-inicia{
+          background-color: $color-rojo;
+          font-size: $f-normal;
+          color: white;
+          &:hover{
+            background-color: $color-rojo-oscuro;
+            cursor: pointer;
+          }
+        }
+
+        p{
+          margin: 1.5rem auto;
+          font-size: $f-normal;
+        }
+
+        .formulario-boton-codigo{
+          background-color: rgba(120,120,120,0.5);
+          color:white;
+          &:hover{
+            background-color: rgba(100,100,100,0.5);
+            cursor: pointer;
+          }
+        }
+
+        a{
+          all:unset;
+          font-size: $f-normal;
+          &:hover{
+            color: rgb(170,170,170);
+            text-decoration: underline;
+            cursor:pointer;
+          }
+        }
+      }
+      //Fin de los botones de session
+
+      //Recuerdame
+      .recuerdame-check{
+        margin-top: 1rem;
+        display: flex;
+        input[type=checkbox]{
+          appearance: none;
+          background-color: black;
+          border: 1px solid whitesmoke;
+          border-radius: $borde-redondeado;  
+          width: 2rem;
+          height: 2rem;
+          &:checked{
+            appearance: revert;
+            accent-color: whitesmoke;    
+          }
+        }
+
+        label{
+          margin-left: 1.6rem;
+          font-size: $f-normal;
+        }
+      }
+      //Fin del recuerda
+
+      //Suscribete Ahora
+      .suscribete{
+        margin-top: 1rem;
+        p{
+          color: rgb(200,200,200);
+        }
+        a{
+          font-family: "Roboto-Bold";
+          color: white;
+        }
+      }
+      //Fin del Suscribete Ahora
+      //Hecho por
+      .hecho-por{
+        color: rgb(200,200,200);;
+        p{
+          font-size: $f-peque;
+        }  
+        a{
+          all: unset;
+          color: #0a62ae;
+          font-size: $f-peque;
+        }
+      }
+    }
+  }
+  
+}
+
+//
+footer{
+  color: white;
+  font-size: $f-normal;
+}
+
