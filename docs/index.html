@@ -1,15 +1,11 @@
 <!doctype html>
 <html lang="es">
-  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Proyecto de Enmanuel De La Cruz, No es una">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <title>DevFlix Login - Por Enmanuel</title>
-    <script type="module" crossorigin src="./assets/index-D4x9x0ld.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-D-3NaT1m.css">
+    <title>Netflix Login - Por Bianna</title>
+    <script type="module" crossorigin src="./assets/index-BLNoi55K.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BVl64WUO.css">
   </head>
   <body>
     <div class="container">
@@ -17,30 +13,72 @@
       <header>
         <nav>
           <a class="nav-logo">
-            <img src="img/logo-Devflix.png"  width="150px" height="40px" walt="Logo de Devflix">
+            <img src="img/Logo-Devflix.png" alt="logo de Netflix" width="150px" height="40px">
           </a>
           <div class="nav-botones">
-            <select name="idiomas" id="idiomas" class="nav-boton">              
+            <select name="idiomas" id="idiomas" class="nav-boton">
               <option value="esp">&#xf1ab; Español</option>
               <option value="ing">&#xf1ab; Ingles</option>
             </select>
-            <button class="nav-boton">Suscríbete Ahora</button>
+            <button class="nav-boton">Suscribete</button>
           </div>
         </nav>
       </header>
       <!--Fin del Header-->
 
+      <!--Main-->
+      <main>
+        <div class="card-formulario">
+          <form action="#">
+            <!--Correo y contraseña-->
+            <legend>Inicia sesión</legend>
+            <div class="campo">
+              <input type="text" id="usuario" required>
+              <label>Email o número de telefono</label>
+            </div>
+            <div class="campo">
+              <input type="password" id="password" required>
+              <label>Contraseña</label>
+            </div>
+            <!--Botones, chekbox y suscribete-->
+            <div class="formulario-sesion">
+              <!--Botones-->
+              <button class="formulario-boton-sesion">Iniciar sesión</button>
+              <p>O</p>
+              <button class="formulario-boton-codigo">Usar un código de inicio de sesión</button>
+              <p><a href="">¿Olvidaste la contraseña?</a></p>
+              <!--Recuerdame-->
+              <div class="check">
+               <input type="checkbox" id="recuerdame" name="recuerdame" checked>
+               <label for="recuerdame">Recuérdame</label>
+              </div>
+              <!--Suscribete-->
+              <div class="sub">
+                <p>¿Primera vez en Devflix? <a href="">Suscríbete ahora</a></p>
+              </div>
+              <div class="contacto">
+                <p>Esta página fue hecha por Bianna Santana, como parte de un proyecto con HTML, SCSS y Vite. Puedes 
+                  <a href="mailto:biannasantana07@gmail.com" class="contacto" target="_blank">Contactarme por mail</a> 
+                   o <a href="https://github.com/Lowafire" class="contacto" target="_blank">ir a mi Github</a>.
+                </p> 
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <!--Fin del Main-->
+
       <!--Footer-->
       <footer>
-        <div class="grid-container-footer">
-          <div class="numero">¿Preguntas? Llama al <a href="">1 (809) 000-0000 (RD)</a></div>
+        <div class="container-footer">
+          <div class="numero">¿Preguntas? Llama al <a href="">1(809)000-0000 (RD)</a></div>
           <div class="frecuentes"><a href="">Preguntas frecuentes</a></div>
-          <div class="ayuda"><a href="">Centro de ayuda</a></div>
-          <div class="terminos"><a href="">Términos de uso</a></div>
-          <div class="privacidad"><a href="">Privacidad</a></div>
-          <div class="cookies"><a href="">Preferencias de cookies</a></div>
-          <div class="corporativa"><a href="">Información corporativa</a></div>
-        </div>      
+          <div class="ayuda"> <a href="">Centro de ayuda</a></div>
+          <div class="terminos"> <a href="">Términos de uso</a></div>
+          <div class="privacidad"> <a href="">Privacidad</a></div>
+          <div class="cookies"> <a href="">Preferencias de cookies</a></div>
+          <div class="informacion"> <a href="">Información corporativa</a></div>
+        </div>
       </footer>
       <!--Fin del Footer-->
     </div>
