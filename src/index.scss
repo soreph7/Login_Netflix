@@ -1,8 +1,11 @@
 /*Variables Colores y Opacidad*/
 $opacidad-negro: rgba(0,0,0,0.5);
 $opacidad-negro-fuerte: rgba(0,0,0,0.65);
-$color-rojo: #E50914;
-$color-rojo-oscuro: #B20710;
+$color-rojo: red;
+$color-rojo-oscuro: orangered;
+
+//$color-rojo: #E50914;
+//$color-rojo-oscuro: #B20710;
 
 /*Fuentes*/
 $f-peque: 1.3rem;
@@ -249,4 +252,3 @@ footer{
   color: white;
   font-size: $f-normal;
 }
-
